@@ -2,7 +2,7 @@
 
 `docker compose exec php bash`
 
-## Then inside the container:
+## If you want to set up a brand-new project, then inside the container:
 
 `composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.9 .`
 
@@ -34,7 +34,7 @@
   --opensearch-timeout=15 \
   --backend-frontname=admin`
 
-## Setup the developer mode:
+## Set up the developer mode:
 
 ```
 bin/magento deploy:mode:set developer

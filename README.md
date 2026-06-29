@@ -26,6 +26,8 @@ Magento itself is not included in this repository. You need to install it with C
 
 ## Getting Started
 
+Copy `.env.example` as `.env` and edit your preferences
+
 Build and start the containers:
 
 ```bash
