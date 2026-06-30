@@ -46,6 +46,5 @@ bin/magento indexer:reindex
 
 ```
 bin/magento config:set twofactorauth/general/force_providers google
-bin/magento config:set twofactorauth/google/otp_window 60
 bin/magento cache:clean
 ```
