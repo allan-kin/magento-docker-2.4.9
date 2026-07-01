@@ -56,8 +56,11 @@ RUN curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php \
 
 COPY php.ini /usr/local/etc/php/conf.d/zz-magento.ini
 
-RUN usermod -u 1000 www-data \
-    && groupmod -g 1000 www-data
+ARG HOST_UID=1000
+ARG HOST_GID=1000
+
+RUN groupmod -o -g ${HOST_GID} www-data \
+    && usermod -o -u ${HOST_UID} -g ${HOST_GID} www-data
 
 RUN mkdir -p /tmp/composer-cache \
     && chown -R www-data:www-data /tmp/composer-cache
